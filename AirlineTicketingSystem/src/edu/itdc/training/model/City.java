@@ -2,6 +2,7 @@ package edu.itdc.training.model;
 
 public class City {
 	private String city;
+	private int cityId;
 	
 	public City () {}
 
@@ -15,6 +16,10 @@ public class City {
 
 	public void setCity(String city) {
 		this.city = city;
+	}
+	
+	public int getCityId() {
+		return cityId;
 	}
 	
 	
