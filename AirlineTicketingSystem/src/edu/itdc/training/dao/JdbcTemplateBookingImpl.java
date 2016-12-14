@@ -28,10 +28,10 @@ public class JdbcTemplateBookingImpl implements BookingDAO {
 	
 	
 	@Override
-	public List<Trip> searchFlight(int fromCityId, int toCityId, Date departureTime, Date arrivalTime) {
+	public List<Trip> searchFlight(int fromCityId, int toCityId, Date departureTime, Date arrivalTime, int numberOfpAssenger) {
 		jdbcTemplate = new JdbcTemplate(dataSource);
 		List<Trip> tripList = new ArrayList<Trip>();
-		List<Map<String, Object>> rows = jdbcTemplate.queryForList(SEARCH_FLIGHT, new Object[]{fromCityId, toCityId, departureTime, arrivalTime});
+		List<Map<String, Object>> rows = jdbcTemplate.queryForList(SEARCH_FLIGHT, new Object[]{fromCityId, toCityId, departureTime, arrivalTime, numberOfpAssenger});
 		
 		if ((rows != null)) {
 			for (Map<String, Object> row: rows) {
@@ -40,6 +40,7 @@ public class JdbcTemplateBookingImpl implements BookingDAO {
 				trip.setToCityId((int)(row.get("ToCityId")));
 				trip.setDepartureTime((Date)(row.get("DepartureTime")));
 				trip.setArrivalTime((Date)(row.get("ArrivalTime")));
+				trip.setNumberOfPassenger((int)row.get("numberOfPassenger"));
 				tripList.add(trip);
 			}
 			return tripList;

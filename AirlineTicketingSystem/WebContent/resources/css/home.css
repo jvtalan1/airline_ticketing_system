@@ -1,0 +1,53 @@
+@CHARSET "UTF-8";
+
+div.flight-search {
+	position: relative;
+	height: 300px;
+	width: 95%;
+	min-width: 1000px;
+	margin: auto;
+	top: 150px;
+	background-color: rgba(248, 197, 132, 1);
+	padding: 20px;
+	border-radius: 10px;
+	font-size: 14px;
+}
+
+.search-container form input[type=text] {
+	box-sizing: border-box;
+	border: 1px solid #BEBEBE;
+	padding: 7px;
+	margin: 0px;
+	transition: all 0.30s ease-in-out;
+	width: 300px;
+	outline: none;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+.search-container form div input.datepicker {
+	cursor: pointer;
+}
+
+.search-container form div .glyphicon {
+	margin-left: -25px;
+	opacity: 0.6;
+}
+
+.search-container form input:focus {
+	box-shadow: 0 0 8px #88D5E9;
+	border: 1px solid #88D5E9;
+}
+
+.search-container form input[type=radio] {
+	margin-right: 10px;
+}
+
+.search-container form label {
+	margin-right: 10px;
+}
+
+.search-container .content-column {
+	
+	column-count: 3;
+}

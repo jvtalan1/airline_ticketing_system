@@ -3,38 +3,24 @@ package edu.itdc.training.model;
 import java.util.Date;
 
 public class Trip {
-	private Date departureTime;
-	private Date arrivalTime;
+	
 	private int fromCityId;
 	private int toCityId;
+	private Date departureTime;
+	private Date arrivalTime;
 	private int numberOfPassenger;
-	private String fromCity;
-	private String toCity;
 	
 	
 	public Trip() {}
 	
 	
-	
-	public Trip(Date departureTime, Date arrivalTime, int fromCityId, int toCityId, int numberOfPassenger) {
-		super();
-		this.departureTime = departureTime;
-		this.arrivalTime = arrivalTime;
+	public Trip(int fromCityId, int toCityId, Date departureTime, Date arrivalTime, int numberOfPassenger) {
 		this.fromCityId = fromCityId;
 		this.toCityId = toCityId;
-		this.numberOfPassenger = numberOfPassenger;
-	}
-	
-	public Trip(Date departureTime, Date arrivalTime, String fromCity, String toCity, int numberOfPassenger) {
-		super();
 		this.departureTime = departureTime;
 		this.arrivalTime = arrivalTime;
-		this.fromCity = fromCity;
-		this.toCity = toCity;
 		this.numberOfPassenger = numberOfPassenger;
 	}
-	
-	
 	
 	
 	public Date getDepartureTime () {
